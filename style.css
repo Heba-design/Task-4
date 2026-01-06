@@ -25,13 +25,40 @@ body {
 .top-bar-content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 8px 0;
 }
 
-.top-right a {
-  margin-left: 12px;
+.top-header-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.top-header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-header-right a {
   color: #333;
   text-decoration: none;
+  font-size: 13px;
+}
+
+.top-header-right select {
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.divider {
+  height: 16px;
+  width: 1px;
+  background: #ccc;
+  border: none;
 }
 
 /* ================= HEADER ================= */
@@ -605,107 +632,3 @@ background-position: center 80%;
     height: 380px;
   }
 
-/* ================= HOT DEALS ================= */
-
-.hot-deals {
-  margin: 80px auto;
-}
-
-.hot-deals-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-.hot-deals-layout {
-  display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 24px;
-}
-
-/* ===== BIG CARD ===== */
-.hot-deals .featured-card {
-  position: relative;
-  border: 2px solid #b7e4c7;
-  border-radius: 12px;
-  padding: 20px;
-  background: #fff;
-}
-
-.hot-deals .featured-card .badges {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  display: flex;
-  gap: 6px;
-}
-
-.hot-deals .featured-image {
-  position: relative;
-  height: 260px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hot-deals .featured-image img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-/* Hover overlay */
-.hot-deals .featured-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: .3s;
-}
-
-.hot-deals .featured-card:hover .featured-overlay {
-  opacity: 1;
-}
-
-/* ===== INFO ===== */
-.hot-deals .featured-info {
-  text-align: center;
-  margin-top: 14px;
-}
-
-/* ===== SMALL CARDS ===== */
-.hot-deals .deals-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.hot-deals .deal-card {
-  position: relative;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  padding: 14px;
-  text-align: center;
-}
-
-.hot-deals .deal-img {
-  height: 140px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hot-deals .deal-img img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-/* hover effect like figma */
-.hot-deals .deal-card:hover {
-  border: 2px solid #00b207;
-}
