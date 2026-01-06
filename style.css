@@ -203,6 +203,14 @@ body {
   border-radius: 30px;
 }
 
+.btn-white i {
+  color: #00b207;
+}
+.btn-white span {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  }
 /* right side */
 .hero-side {
   display: flex;
